@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <div class="logo-main">LOGO</div>
+        <div class="navbar">
+            <ion-icon name="menu-outline" class="nav-icons menu"></ion-icon>
+            <ion-icon name="close-outline" class="nav-icons close"></ion-icon>
+            <ul class="navlist">
+                <li class="nav-item"><a href="#" class="active">HOME</a></li>
+                <li class="nav-item"><a href="#">ABOUT US</a></li>
+                <li class="nav-item"><a href="#">CONTACT</a></li>
+                <li class="nav-item"><button>LOGIN</button></li>
+            </ul>
+        </div>
+    </nav>
+    <main>
+        <!-- login form  -->
+        <div class="login-container">
+            <!-- login  -->
+            <div class="login-form">
+                <ion-icon class="user-logo" name="person-circle-outline"></ion-icon>
+                <input type="text" name="username" class="input-field" placeholder="user id">
+                <input type="password" name="userpassword" class="input-field" placeholder="password">
+                <span class="remember-me-form">Remember Me <input type="checkbox"></span>
+                <input type="submit" name="submit" value="login">
+                <div>
+                    <button class="form-btn light">Register</button>
+                    <a href="#">Forgot Password</a>
+                </div>
+            </div>
+            <!-- register -->
+            <div class="register-form"></div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-text">All rights reserved <span class="footer-main">@vickysingh</span></div>
+        <div class="footer-icons">
+            <ion-icon name="logo-facebook" class="nav-icons social"></ion-icon>
+            <ion-icon name="logo-instagram" class="nav-icons social"></ion-icon>
+            <ion-icon name="logo-linkedin" class="nav-icons social"></ion-icon>
+            <ion-icon name="logo-youtube" class="nav-icons social"></ion-icon>
+        </div>
+    </footer>
+    <script src="main.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

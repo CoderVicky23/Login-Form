@@ -1,0 +1,216 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+body {
+    min-height: 100vh;
+    background-image: url('/one/image.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    background-attachment: fixed;
+}
+
+/* navbar  */
+
+nav {
+    font-size: 1em;
+    position: sticky;
+    top: 0;
+    border: 2px solid white;
+    padding: 1em;
+    display: flex;
+    justify-content: space-between;
+}
+.logo-main {
+    color: #fff;
+    font-size: 2em;
+    font-weight: 700;
+    letter-spacing: 5px;
+    text-shadow: 5px 5px 2px #b6b3b3;
+    pointer-events: none;
+}
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.nav-icons {
+    font-size: 2.5em;
+    font-weight: 700;
+    color: #fff;
+    cursor: pointer;
+}
+.close {
+    display: none;
+}
+.navlist {
+    position: fixed;
+    inset: 0;
+    background-image: linear-gradient(to right, rgba(0,0,0,.9), rgba(0,0,0,0.5));
+    font-size: 1.5em;
+    z-index: 10;
+    display: flex;
+    gap: 2.5em;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+.nav-item {
+    list-style: none;
+}
+.nav-item a {
+    text-decoration: none;
+    color: #fff;
+    transition: .5s;
+    position: relative;
+}
+.nav-item a::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #fff;
+    transition: .5s;
+}
+.nav-item a:hover::after {
+    width: 100%;
+}
+.nav-item button {
+    padding: .25em .5em;
+    font-size: 1em;
+    background-color: transparent;
+    outline: none;
+    color: #fff;
+    cursor: pointer;
+    border: 2px solid #fff;
+    border-radius: 3px;
+    transition: .3s ease;
+}
+.nav-item button:hover {
+    color: #000;
+    background-color: #fff;
+}
+
+@media (min-width: 599px) {   
+    .menu {
+        display: none;
+    }
+    .navlist {
+        position: relative;
+        background-color: transparent;
+        display: flex;
+        flex-direction: row;
+        background: none;
+        justify-content: center;
+        align-items: center;
+        gap: 1em;
+        font-size: 1.25em;
+    }
+}
+@media (min-width: 800px) {
+    nav {
+        padding-inline: 2em;
+    }
+    .navlist {
+        gap: 2em;
+    }
+}
+
+/* main */
+
+main {
+    height: fit-content;
+    border: 1px solid blue;
+}
+
+/* login  */
+.login-container {
+    font-size: 16px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 2px solid green;
+}
+.login-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    padding: 3em 2em;
+}
+.user-logo {
+    font-size: 4em;
+}
+.input-field {
+    font-size: 1.5em;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    padding-bottom: 5px;
+}
+.input-field::placeholder {
+    color: #fff;
+}
+.input-field:focus, .input-field:not(:placeholder-shown) {
+    border-bottom: 2px solid grey;
+}
+.remember-me-form {
+    align-self: flex-end;
+}
+.remember-me-form input {
+    font-size: 1.5em;
+}
+
+/* footer  */
+
+footer {
+    height: 100px;
+    width: 100%;
+    background-color: #989aa23d;
+    box-shadow: 0px -20px 80px 100px #989aa23d;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border-top: 2px solid blue;
+    z-index: -1;
+}
+.footer-text {
+    font-size: 1em;
+    color: #bbb7b7;
+    margin-bottom: 1em;
+}
+.footer-main {
+    color: #f28ae4;
+}
+.footer-icons {
+    margin-bottom: 2.5em;
+    display: flex;
+    gap: 2em;
+}
+.social {
+    color: #bbb7b7;
+    scale: .75;
+    transition: .25s ease;
+}
+.social:hover {
+    color: #fff;
+    scale: 1;
+}
+@media (min-width: 599px) {
+    .footer-text {
+        font-size: 1.25em;
+    }
+}
