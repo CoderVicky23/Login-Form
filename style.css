@@ -128,17 +128,18 @@ nav {
 
 main {
     height: fit-content;
-    border: 1px solid blue;
 }
 
 /* login  */
 .login-container {
     font-size: 16px;
     padding: 2em 1.5em;
-    position: absolute;
+    margin-block: 3em;
+    margin-inline: 1em;
+    /* position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); */
 }
 .glass {
     background: linear-gradient(135deg, rgba(255, 255, 255, .1), rgba(255, 255, 255, 0));
@@ -152,7 +153,13 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 1.5em;
+    gap: 2em;
+}
+.sign-in {
+    display: none;
+}
+.sign-up {
+    display: flex;
 }
 .form-h1 {
     text-transform: uppercase;
@@ -171,7 +178,7 @@ main {
     color: #ffffff;
     transition: .5s ease;
 }
-input {
+input:not([type=checkbox]) {
     font-size: 1.1em;
     background: transparent;
     border: none;
@@ -182,6 +189,10 @@ input {
     width: 80vw;
     max-width: 300px;
     transition: .5s ease;
+}
+input[type=checkbox] {
+    width: 1.25em;
+    height: 1.25em;
 }
 input:focus, input:valid {
     border: none;
@@ -220,7 +231,6 @@ input:valid + .input-span {
 .form-icons ion-icon{
     font-size: 1.75em;
     margin-inline: .25em;
-    border: 2px solid rgb(255, 0, 85);
     border-radius: 10px;
     padding: .2em;
     color: #fff;
@@ -229,7 +239,6 @@ input:valid + .input-span {
 .form-icons ion-icon:hover {
     color: rgb(255, 0, 85);
     background-color: #fff;
-    border: 2px solid #fff;
 }
 .sign-in-link {
     color: rgb(255, 0, 85);
@@ -249,7 +258,6 @@ footer {
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    border-top: 2px solid blue;
     z-index: -1;
 }
 .footer-text {

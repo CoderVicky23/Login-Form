@@ -24,7 +24,7 @@
         <!-- login form  -->
         <div class="login-container glass">
             <!-- login  -->
-            <div class="login-form">
+            <div class="login-form sign-in">
                 <div class="form-h1">login</div>
                 <div class="input-box">
                     <input name="username" type="text" required="required">
@@ -45,9 +45,38 @@
                     <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
                 </div>
                 <div class="login-h4">
+                    <span>Don't have an Account</span>
+                    <span class="sign-in-link">Sign Up</span>
+                </div>
+            </div>
+
+            <!-- register -->
+            <div class="login-form sign-up">
+                <div class="form-h1">Sign Up</div>
+                <div class="input-box">
+                    <input type="email" required="required" name="email" pattern="">
+                    <span class="input-span">email</span>
+                </div>
+                <div class="input-box">
+                    <input type="password" required="required" name="password">
+                    <span class="input-span">password</span>
+                </div>
+                <div class="input-box">
+                    <input type="password" required="required" name="conf_password">
+                    <span class="input-span">confirm password</span>
+                </div>
+                <div class="input-checkbox" style="align-self: flex-start;">
+                    <input type="checkbox" name="remember-me" id="remember-me">
+                    <label for="remember-me"> Remember Me</label>
+                </div>
+                <button class="submit-btn">
+                    sign up
+                </button>
+                <div class="login-h4">
                     <span>Already a User</span>
                     <span class="sign-in-link">Sign In</span>
                 </div>
+            </div>
         </div>
     </main>
     <footer>
