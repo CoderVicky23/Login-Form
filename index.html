@@ -22,21 +22,32 @@
     </nav>
     <main>
         <!-- login form  -->
-        <div class="login-container">
+        <div class="login-container glass">
             <!-- login  -->
             <div class="login-form">
-                <ion-icon class="user-logo" name="person-circle-outline"></ion-icon>
-                <input type="text" name="username" class="input-field" placeholder="user id">
-                <input type="password" name="userpassword" class="input-field" placeholder="password">
-                <span class="remember-me-form">Remember Me <input type="checkbox"></span>
-                <input type="submit" name="submit" value="login">
-                <div>
-                    <button class="form-btn light">Register</button>
-                    <a href="#">Forgot Password</a>
+                <div class="form-h1">login</div>
+                <div class="input-box">
+                    <input name="username" type="text" required="required">
+                    <span class="input-span">user name</span>
                 </div>
-            </div>
-            <!-- register -->
-            <div class="register-form"></div>
+                <div class="input-box">
+                    <input type="password" name="password" required="required">
+                    <span class="input-span">password</span>
+                </div>
+                <div style="align-self: flex-end;"><a href="#" class="sub-heading">Forgot Password</a></div>
+                <button class="submit-btn">
+                    login
+                </button>
+                <span class="login-h4">Or Sign In Using</span>
+                <div class="form-icons">
+                    <a href="#"><ion-icon name="logo-google"></ion-icon></a>
+                    <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+                    <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
+                </div>
+                <div class="login-h4">
+                    <span>Already a User</span>
+                    <span class="sign-in-link">Sign In</span>
+                </div>
         </div>
     </main>
     <footer>

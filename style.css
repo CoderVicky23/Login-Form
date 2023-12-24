@@ -6,7 +6,7 @@
 }
 body {
     min-height: 100vh;
-    background-image: url('/one/image.jpg');
+    background-image: url('image.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -134,43 +134,108 @@ main {
 /* login  */
 .login-container {
     font-size: 16px;
+    padding: 2em 1.5em;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    border: 2px solid green;
+}
+.glass {
+    background: linear-gradient(135deg, rgba(255, 255, 255, .1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, .25);
 }
 .login-form {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 1em;
-    padding: 3em 2em;
+    gap: 1.5em;
 }
-.user-logo {
-    font-size: 4em;
+.form-h1 {
+    text-transform: uppercase;
+    font-size: 2em;
+    color: #fff;
+    font-weight: 900;
 }
-.input-field {
-    font-size: 1.5em;
-    background-color: transparent;
+.input-box {
+    position: relative;
+}
+.input-span {
+    position: absolute;
+    top: .75em;
+    left: 1em;
+    pointer-events: none;
+    color: #ffffff;
+    transition: .5s ease;
+}
+input {
+    font-size: 1.1em;
+    background: transparent;
     border: none;
     outline: none;
-    padding-bottom: 5px;
+    border: 2px solid #fd558d;
+    border-radius: 20px;
+    padding: .5em 1em;
+    width: 80vw;
+    max-width: 300px;
+    transition: .5s ease;
 }
-.input-field::placeholder {
+input:focus, input:valid {
+    border: none;
+    border-radius: 0;
+    border-bottom: 2px solid rgb(253, 85, 141);
+}
+input:focus + .input-span,
+input:valid + .input-span {
+    color: #fff;
+    font-weight: 600;
+    top: -15px;
+    left: 0;
+}
+.submit-btn {
+    text-transform: uppercase;
+    background-color: transparent;
+    color: rgb(255, 0, 85);
+    padding: .5em 3em;
+    border: none;
+    border: 2px solid rgb(255, 0, 85);
+    outline: none;
+    font-size: 1.25em;
+    font-weight: 600;
+    border-radius: 20px;
+    transition: .5s ease;
+    cursor: pointer;
+}
+.submit-btn:hover, .submit-btn:focus {
+    color: #fff;
+    background-color: rgb(255, 0, 85);
+    border: 2px solid rgb(255, 0, 85);
+}
+.login-h4 {
     color: #fff;
 }
-.input-field:focus, .input-field:not(:placeholder-shown) {
-    border-bottom: 2px solid grey;
+.form-icons ion-icon{
+    font-size: 1.75em;
+    margin-inline: .25em;
+    border: 2px solid rgb(255, 0, 85);
+    border-radius: 10px;
+    padding: .2em;
+    color: #fff;
+    transition: .3s ease;
 }
-.remember-me-form {
-    align-self: flex-end;
+.form-icons ion-icon:hover {
+    color: rgb(255, 0, 85);
+    background-color: #fff;
+    border: 2px solid #fff;
 }
-.remember-me-form input {
-    font-size: 1.5em;
+.sign-in-link {
+    color: rgb(255, 0, 85);
+    font-weight: 600;
+    cursor: pointer;
 }
-
 /* footer  */
 
 footer {
